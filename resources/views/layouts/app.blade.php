@@ -26,7 +26,7 @@
         <div class="w-1/3 overflow-scroll">
             <x-sidebar/>
         </div>
-        <div class="bg-gray-100 w-2/3 p-6 overflow-scroll">
+        <div class="bg-gray-100 w-2/3 p-6 overflow-scroll min-h-screen">
             @yield('content')
         </div>
     </div>

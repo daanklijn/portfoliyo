@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,4 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [WelcomeController::class, 'show']);
+Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
+Route::get('/collections/{id}', 'CollectionController@show')->name('collection.show');
+Route::view('/about','about')->name('about');

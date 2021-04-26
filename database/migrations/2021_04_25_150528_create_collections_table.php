@@ -17,6 +17,7 @@ class CreateCollectionsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->text('title');
+            $table->text('subtitle');
             $table->text('description');
         });
     }

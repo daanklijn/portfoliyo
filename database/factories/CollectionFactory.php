@@ -25,7 +25,8 @@ class CollectionFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(2),
-            'description' => $this->faker->sentence(),
+            'subtitle' => $this->faker->sentence(),
+            'description' => $this->faker->paragraph(),
         ];
     }
 

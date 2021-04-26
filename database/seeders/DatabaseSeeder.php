@@ -16,8 +16,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Collection::factory()
-            ->count(12)
-            ->hasPhotos(1)
+            ->count(8)
+            ->hasPhotos(20)
             ->create();
     }
 }
