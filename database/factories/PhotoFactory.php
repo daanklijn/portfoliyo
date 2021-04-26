@@ -22,10 +22,10 @@ class PhotoFactory extends Factory
      */
     public function definition()
     {
-        $num = $this->faker->numberBetween(1, 9);
+        $num = $this->faker->unique()->numberBetween(1, 12);
         return [
             'title' => $this->faker->sentence(),
-            'path' => "/images/$num.jpg",
+            'path' => "/images2/$num.png",
         ];
     }
 }
