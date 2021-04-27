@@ -44,7 +44,7 @@ class EditCollectionForm extends Component
 
     public function remove($photo)
     {
-        # TODO: Also remove the corresponding file from storage.
+        // TODO: Also remove the corresponding file from storage.
         Photo::destroy($photo);
         $this->collection->refresh();
     }
@@ -78,7 +78,7 @@ class EditCollectionForm extends Component
         $valid = $this->validate([
             'photo' => 'image|max:2048', // 2MB Max
         ]);
-        # TODO: do something when file is too large
+        // TODO: do something when file is too large
 
         $path = $this->photo->storePublicly('public');
         $path = Str::of($path)->replace('public', 'storage');

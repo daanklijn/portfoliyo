@@ -19,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
 Route::get('/collection/', [CollectionController::class, 'index'])->name('collection.index');
 Route::get('/collection/{id}', [CollectionController::class , 'show'])->name('collection.show');
+Route::view('/about','about')->name('about');
+
+// TODO: add a gate to block these routes for non-admins
 Route::get('/collection/{id}/edit', EditCollectionForm::class)->name('collection.edit');
 Route::get('/collection/{id}/delete', [CollectionController::class, 'delete'])->name('collection.delete');
-Route::view('/about','about')->name('about');
