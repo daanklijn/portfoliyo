@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Photo extends Model
 {
+    public $fillable = ['path', 'title', 'order', 'id'];
+
     use HasFactory;
 }

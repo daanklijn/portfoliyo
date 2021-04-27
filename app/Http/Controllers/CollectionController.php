@@ -16,4 +16,15 @@ class CollectionController extends Controller
     {
         return view('collection.show', ['collection'=>Collection::find($id)]);
     }
+
+    public function edit($id)
+    {
+        return view('collection.edit', ['collection'=>Collection::find($id)]);
+    }
+
+    public function delete($id)
+    {
+        Collection::destroy($id);
+        return redirect()->back();
+    }
 }

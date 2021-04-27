@@ -10,6 +10,8 @@ class Collection extends Model
 {
     use HasFactory;
 
+    public $fillable = ['title', 'subtitle', 'description'];
+
     public function photos()
     {
         return $this->hasMany(Photo::class);

@@ -18,6 +18,7 @@ class CreatePhotosTable extends Migration
             $table->timestamps();
             $table->string('path');
             $table->text('title');
+            $table->integer('order')->default(0);
             $table->foreignId('collection_id');
         });
     }

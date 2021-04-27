@@ -31,9 +31,9 @@
         </td>
         <td class="py-3 px-6 text-left">
             <div class="flex item-center justify-center space-x-2">
-                <a class="hover:text-blue-400" href="{{ route('collection.index') }}"><i class="fa fa-eye"></i></a>
-                <a class="hover:text-blue-400" href="{{ route('collection.index') }}"><i class="fa fa-pen"></i></a>
-                <a class="hover:text-blue-400" href="{{ route('collection.index') }}"><i class="fa fa-trash"></i></a>
+                <a class="hover:text-blue-400" href="{{ route('collection.show', $collection) }}"><i class="fa fa-eye"></i></a>
+                <a class="hover:text-blue-400" href="{{ route('collection.edit', $collection) }}"><i class="fa fa-pen"></i></a>
+                <a class="hover:text-blue-400" href="{{ route('collection.delete', $collection) }}"><i class="fa fa-trash"></i></a>
             </div>
         </td>
     </tr>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Livewire\EditCollectionForm;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
-Route::get('/collection/{id}', 'CollectionController@show')->name('collection.show');
-Route::get('/collection/', 'CollectionController@index')->name('collection.index');
+Route::get('/collection/', [CollectionController::class, 'index'])->name('collection.index');
+Route::get('/collection/{id}', [CollectionController::class , 'show'])->name('collection.show');
+Route::get('/collection/{id}/edit', EditCollectionForm::class)->name('collection.edit');
+Route::get('/collection/{id}/delete', [CollectionController::class, 'delete'])->name('collection.delete');
 Route::view('/about','about')->name('about');

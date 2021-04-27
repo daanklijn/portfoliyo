@@ -20,6 +20,7 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
+    @livewireStyles
 </head>
 <body class="antialiased">
     <div class="flex flex-row w-full max-h-screen">
@@ -28,7 +29,9 @@
         </div>
         <div class="bg-gray-100 w-2/3 p-6 overflow-scroll min-h-screen">
             @yield('content')
+            {{ $slot ?? '' }}
         </div>
     </div>
+    @livewireScripts
 </body>
 </html>

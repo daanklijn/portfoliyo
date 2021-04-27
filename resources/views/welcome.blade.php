@@ -4,6 +4,7 @@
 <div class="masonry-2">
     @foreach($collections as $collection)
     <a href="{{ route('collection.show', $collection) }}">
+    @if($collection->photos->isNotEmpty())
     <div class="mb-6 relative cursor-pointer">
         <img src="{{$collection->photos->first()['path']}}">
         <!--Overlay-->
@@ -15,6 +16,7 @@
             </div>
         </div>
     </div>
+    @endif
     </a>
     @endforeach
 </div>

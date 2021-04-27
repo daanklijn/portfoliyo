@@ -12,6 +12,10 @@
         .max-w-xxs{
             max-width: 14em;
         }
+        .min-h-100
+        {
+            min-height: 100px;
+        }
         .masonry-2 {
             column-count: 2;
             column-gap: 1.5em;

@@ -14,6 +14,7 @@ class PhotoFactory extends Factory
      * @var string
      */
     protected $model = Photo::class;
+    protected $count = 0;
 
     /**
      * Define the model's default state.
@@ -23,9 +24,11 @@ class PhotoFactory extends Factory
     public function definition()
     {
         $num = $this->faker->unique()->numberBetween(1, 11);
+        $this->count++;
         return [
             'title' => $this->faker->sentence(),
             'path' => "/images5/$num.png",
+            'order' => $this->count
         ];
     }
 }
