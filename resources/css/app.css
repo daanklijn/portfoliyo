@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 @import '~@fortawesome/fontawesome-free/css/fontawesome';
-/*@import '~@fortawesome/fontawesome-free/css/regular';*/
-/*@import '~@fortawesome/fontawesome-free/css/solid';*/
+@import '~@fortawesome/fontawesome-free/css/regular';
+@import '~@fortawesome/fontawesome-free/css/solid';
 @import '~@fortawesome/fontawesome-free/css/brands';
 
 @layer utilities {
     @variants responsive {
+        .max-w-xxs{
+            max-width: 14em;
+        }
         .masonry-2 {
             column-count: 2;
             column-gap: 1.5em;

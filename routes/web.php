@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [WelcomeController::class, 'show'])->name('welcome');
-Route::get('/collections/{id}', 'CollectionController@show')->name('collection.show');
+Route::get('/collection/{id}', 'CollectionController@show')->name('collection.show');
+Route::get('/collection/', 'CollectionController@index')->name('collection.index');
 Route::view('/about','about')->name('about');

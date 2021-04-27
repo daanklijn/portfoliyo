@@ -36,5 +36,6 @@
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-tumblr"></i></a>
         <a href="#"><i class="fab fa-flickr"></i></a>
+        <a href="{{ route('collection.index') }}"><i class="fa fa-cogs"></i></a>
     </div>
 </div>

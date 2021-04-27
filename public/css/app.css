@@ -6088,6 +6088,55 @@ readers do not read off random characters that represent icons */
  */
 
 @font-face {
+  font-family: 'Font Awesome 5 Free';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: block;
+
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?4079ae2d2a15d0689568f3a5459241c7);
+
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?4079ae2d2a15d0689568f3a5459241c7?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?68c5af1f48e2bfca1e57ae1c556a5c72) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?3672264812746c3c7225909742da535c) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?1017bce89c72f95bcf8e2bf4774efdbf) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?19e27d348fefc21941e0310a0ec6339b#fontawesome) format("svg");
+}
+
+.far {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+
+  font-style: normal;
+
+  font-weight: 900;
+
+  font-display: block;
+
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?efbd5d20e407bbf85f2b3087ee67bfa1);
+
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?efbd5d20e407bbf85f2b3087ee67bfa1?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?ada6e6df937f7e5e8b790dfea07109b7) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?c6ec080084769a6d8a34ab35b77999cd) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?07c3313b24f7b1ca85ee99b4fa7db55e) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?13de59f1a36b6cb4bca0050160ff0e41#fontawesome) format("svg");
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+
+@font-face {
   font-family: 'Font Awesome 5 Brands';
 
   font-style: normal;
@@ -37939,6 +37988,10 @@ video {
   --tw-backdrop-sepia: sepia(100%);
 }
 
+.max-w-xxs{
+  max-width: 14em;
+}
+
 .masonry-2 {
   -moz-column-count: 2;
        column-count: 2;
@@ -37957,10 +38010,6 @@ video {
   -moz-column-break-inside: avoid;
        break-inside: avoid;
 }
-
-/*@import '~@fortawesome/fontawesome-free/css/regular';*/
-
-/*@import '~@fortawesome/fontawesome-free/css/solid';*/
 
 .logo-shadow {
   text-shadow: 1px 1px black;
@@ -69074,6 +69123,10 @@ video {
 
   .sm\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
+  }
+
+  .sm\:max-w-xxs{
+    max-width: 14em;
   }
 
   .sm\:masonry-2 {
@@ -100206,6 +100259,10 @@ video {
     --tw-backdrop-sepia: sepia(100%);
   }
 
+  .md\:max-w-xxs{
+    max-width: 14em;
+  }
+
   .md\:masonry-2 {
     -moz-column-count: 2;
          column-count: 2;
@@ -131334,6 +131391,10 @@ video {
 
   .lg\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
+  }
+
+  .lg\:max-w-xxs{
+    max-width: 14em;
   }
 
   .lg\:masonry-2 {
@@ -162466,6 +162527,10 @@ video {
     --tw-backdrop-sepia: sepia(100%);
   }
 
+  .xl\:max-w-xxs{
+    max-width: 14em;
+  }
+
   .xl\:masonry-2 {
     -moz-column-count: 2;
          column-count: 2;
@@ -193594,6 +193659,10 @@ video {
 
   .\32xl\:backdrop-sepia {
     --tw-backdrop-sepia: sepia(100%);
+  }
+
+  .\32xl\:max-w-xxs{
+    max-width: 14em;
   }
 
   .\32xl\:masonry-2 {
