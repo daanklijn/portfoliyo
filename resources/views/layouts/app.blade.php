@@ -28,6 +28,7 @@
             <x-sidebar/>
         </div>
         <div class="bg-gray-100 w-2/3 p-6 overflow-scroll min-h-screen">
+            <x-flash-message/>
             @yield('content')
             {{ $slot ?? '' }}
         </div>
