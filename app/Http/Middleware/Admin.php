@@ -16,7 +16,8 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($request->session()->get('admin_key') == env('ADMIN_KEY')) {
+        if ($request->session()->get('admin_key') == env('ADMIN_KEY') ||
+            !env('ADMIN_KEY')) {
             return $next($request);
         }
         return redirect(route('login'));
