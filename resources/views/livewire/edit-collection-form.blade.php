@@ -57,7 +57,6 @@
             <div class="lg:bg-blue-500 lg:bg-opacity-50 absolute lg:opacity-0 hover:opacity-100
             top-0 right-0 bottom-0 left-0 transition-opacity duration-500">
                 <div class="absolute text-white font-bold left-0 right-0 top-1/4 text-center">
-                    <div wire:click="up({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">{{$photo->order}}</div>
                     <div wire:click="up({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Up</div>
                     <div wire:click="remove({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Remove</div>
                     <div wire:click="down({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Down</div>
