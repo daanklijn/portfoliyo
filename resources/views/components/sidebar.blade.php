@@ -1,7 +1,6 @@
 <div class="p-14">
-    <h1 class="text-4xl font-semibold mb-5 logo-shadow"><a href="/">Portfoliyo.</a></h1>
-    <h2 class="text-xl text-gray-600 mb-10">A minimal, Laravel and Tailwind-based
-        portfolio for all your photos.</h2>
+    <h1 class="text-4xl font-semibold mb-5 logo-shadow"><a href="/">{{ env('APP_TITLE') }}</a></h1>
+    <h2 class="text-xl text-gray-600 mb-10">{{ env('APP_SUBTITLE') }}</h2>
     <div class="text-lg font-semibold text-gray-700 leading-9">
         <ul class="mb-5">
             <li>
