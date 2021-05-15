@@ -17,7 +17,8 @@ class EditCollectionForm extends Component
     public $subtitle;
     public $description;
 
-    public $photo;
+    public $photos;
+    public $selected;
 
     public function mount($id)
     {
@@ -66,27 +67,36 @@ class EditCollectionForm extends Component
         $thisOrder = $thisPhoto->order;
 
         $nextPhoto = $this->collection->photos->firstWhere('order', $direction, $thisOrder);
-        $nextOrder = $nextPhoto->order;
+        if ($nextPhoto) {
+            $nextOrder = $nextPhoto->order;
+            $nextPhoto->update(['order' => $thisOrder]);
+            $thisPhoto->update(['order' => $nextOrder]);
+            $this->collection->refresh();
+        }
+    }
 
-        $nextPhoto->update(['order' => $thisOrder]);
-        $thisPhoto->update(['order' => $nextOrder]);
+    public function updatedPhotos()
+    {
+        $this->validate([
+            'photos' => 'required', // 2MB Max
+            'photos.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+
+        foreach ($this->photos as $photo) {
+            $path = $photo->storePublicly('public');
+            $path = Str::of($path)->replace('public', 'storage');
+            $this->collection->photos()->create([
+                'path' => '/' . $path,
+                'title' => '',
+                'order' => Photo::all()->max('order') + 1
+            ]);
+        }
+
         $this->collection->refresh();
     }
 
-    public function updatedPhoto()
+    public function select($photo)
     {
-        $valid = $this->validate([
-            'photo' => 'image|max:2048', // 2MB Max
-        ]);
-        // TODO: do something when file is too large
-
-        $path = $this->photo->storePublicly('public');
-        $path = Str::of($path)->replace('public', 'storage');
-        $this->collection->photos()->create([
-            'path' => '/' . $path,
-            'title' => '',
-            'order' => Photo::all()->max('order') + 1
-        ]);
-        $this->collection->refresh();
+        $this->selected = $photo['id'];
     }
 }

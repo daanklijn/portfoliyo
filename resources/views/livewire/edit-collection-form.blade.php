@@ -38,10 +38,10 @@
             <div class="text-xl text-gray-700 py-2">Photos</div>
         </li>
         <li class="mr-3">
-            <input type="file" wire:model="photo" id="photo"  accept="image/*" class="hidden">
-            <label for="photo"
+            <input type="file" wire:model="photos" id="photos"  accept="image/*" class="hidden" multiple>
+            <label for="photos"
                 class="inline-block border border-blue-200 rounded py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
-                Add photo
+                Add photos
             </label>
         </li>
     </ul>
@@ -49,19 +49,21 @@
 
     <div class="masonry-3">
         @foreach($collection->photos->sortBy('order')->reverse() as $photo)
-        <div class="mb-6 relative min-h-100">
+        <div class="mb-6 relative min-h-100" wire:click="select({{ $photo }})">
             <img class=""
                  src="{{$photo['path']}}">
 
-            <!--Overlay-->
-            <div class="lg:bg-blue-500 lg:bg-opacity-50 absolute lg:opacity-0 hover:opacity-100
-            top-0 right-0 bottom-0 left-0 transition-opacity duration-500">
-                <div class="absolute text-white font-bold left-0 right-0 top-1/4 text-center">
-                    <div wire:click="up({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Up</div>
-                    <div wire:click="remove({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Remove</div>
-                    <div wire:click="down({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Down</div>
+            @if($selected == $photo->id)
+                <!--Overlay-->
+                <div class="bg-blue-500 bg-opacity-50 absolute
+                top-0 right-0 bottom-0 left-0 transition-opacity duration-500">
+                    <div class="absolute text-white font-bold left-0 right-0 top-1/4 text-center">
+                        <div wire:click="up({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Up</div>
+                        <div wire:click="remove({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Remove</div>
+                        <div wire:click="down({{ $photo }})" class="sm:text-xl lg:text-2xl font-bold m-2 cursor-pointer">Down</div>
+                    </div>
                 </div>
-            </div>
+            @endif
         </div>
         @endforeach
     </div>
