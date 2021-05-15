@@ -40,4 +40,9 @@
     @endforeach
     </tbody>
 </table>
+</div>
+<a href="{{ route('collection.add', 0) }}"
+       class="inline-block border border-blue-200 rounded py-2 px-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
+    Add collection
+</a>
 @endsection

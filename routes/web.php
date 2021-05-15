@@ -28,5 +28,6 @@ Route::group(['prefix' => 'collection', 'middleware' => Admin::class], function 
     Route::get('/', [CollectionController::class, 'index'])->name('collection.index');
     Route::get('/{id}/edit', EditCollectionForm::class)->name('collection.edit');
     Route::get('/{id}/delete', [CollectionController::class, 'delete'])->name('collection.delete');
+    Route::get('/{id}/add', [CollectionController::class, 'add'])->name('collection.add');
 });
 
