@@ -10,7 +10,7 @@
                     About
                 </a>
             </li>
-            <li>
+            <li class="md:block hidden">
                 <a href="{{ route('welcome') }}"
                    class="hover:text-blue-500 transition-colors duration-500
                     {{ Route::currentRouteName() ==  'welcome' ? 'text-blue-500' : ''}}">
@@ -18,7 +18,7 @@
                 </a>
             </li>
         </ul>
-        <ul>
+        <ul class="md:block hidden">
             @foreach ($collections as $collection)
             <li><a href="{{ route('collection.show', $collection) }}"
                    class="hover:text-blue-500 transition-colors duration-300
