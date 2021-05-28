@@ -15,6 +15,7 @@ RUN cd /app && \
     yarn add npx && \
     yarn install && \
     yarn run production
+    php artisan storage:link
 
 RUN chown -R www-data: /app
 
